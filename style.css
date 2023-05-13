@@ -1,0 +1,160 @@
+.container1{
+    width: auto;
+    height: 100%;
+    display: flex;
+    background-color: lightgray;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main{
+    list-style: none;
+    font-size: 18px;
+    width: 200px;
+    height: auto;
+    background-color: lightgray;
+    border-radius: 5px;
+    box-shadow: 5px 2px 12px black;
+    text-align: center;
+}
+.main:hover{
+    font-size: 22px;
+    transform: scale(1.3);
+    background-color: rgb(175, 144, 97);
+    border: 1px solid rgb(8, 0, 114);
+    font-size: 20px;
+}
+.main li{
+    list-style: none;
+    text-align: left;
+}
+
+.main li:hover{
+    transform: scale(1.1);
+    background-color: rgb(110, 105, 98);
+    border: 1px solid rgb(114, 0, 0);
+    color: white;
+    font-size: 20px;
+}
+
+.main:hover > ul{
+    display: block;
+}
+
+ul li {
+    position: relative;
+    transition: 0.4s;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.container1 ul{
+    position: absolute;
+    width: 150px;
+    top: 105%;
+    left: 0;
+    display: none;  
+}
+
+ul ul li {
+    width: 100%;
+}
+
+/* =============================== */
+
+.mapDiv{
+    width: 720px;
+    height: 576px;
+    border: 1px solid black;
+    background-image: url(./img/map.png);
+}
+
+@keyframes pulse{
+    0%{
+        background-color: red;
+        transform: scale(1);
+    }
+    50%{
+        background-color: rgb(249, 115, 115);
+        transform: scale(1.5);
+    }
+    100%{
+        background-color: red;
+        transform: scale(1);
+    }
+} 
+
+.tickets{
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+    border: 1px solid rgb(0, 64, 0);
+    border-radius: 5px;
+}
+
+.city{
+    width: 50px;
+}
+
+.city:hover > .tickets{
+    opacity: 1;
+}
+
+.mark{
+    width: 8px;
+    height: 8px;
+    border: 1px solid rgb(68, 68, 68);
+    border-radius: 50%;
+
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+.mark:hover{
+    animation-play-state: paused;
+}
+
+.cityName{
+    font-weight: 700;
+}
+
+.kyiv{
+    position: absolute;
+    left: 580px;
+    top: 214px;
+}
+
+.warszawa{
+    position: absolute;
+    left: 465px;
+    top: 200px;
+}
+
+.berlin{
+    position: absolute;
+    left: 360px;
+    top: 210px;
+}
+
+.london{
+    position: absolute;
+    left: 200px;
+    top: 223px;
+}
+
+.paris{
+    position: absolute;
+    left: 225px;
+    top: 273px;
+}
